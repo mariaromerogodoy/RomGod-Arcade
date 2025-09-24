@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div class="arcadewall"></div>
+
+    <div class="title-container">
+        <h1 class="main-title" id="main-title">***</h1>
+        <h2 class="subtitle" id="subtitle">This is <i>Rom</i>God**Arcade <br> click any game to begin to play</h2>
+    </div>
+
+    <div class="Images">
+        <a href="../t-rex/index.html">t-rex game</a>
+        <a href="../t-rex/index.html">t-rex game</a>
+        <a href="../t-rex/index.html">t-rex game</a>
+        <a href="../t-rex/index.html">t-rex game</a>
+        <a href="../t-rex/index.html">t-rex game</a>
+        <a href="../t-rex/index.html">t-rex game</a>
+        <a href="../t-rex/index.html">t-rex game</a>
+        <a href="../t-rex/index.html">t-rex game</a>
+        <a href="../t-rex/index.html">t-rex game</a>
+        <a href="../t-rex/index.html">t-rex game</a>
+        <a href="../t-rex/index.html">t-rex game</a>
+        <a href="../t-rex/index.html">t-rex game</a>
+        <a href="../t-rex/index.html">t-rex game</a>
+        <a href="../t-rex/index.html">t-rex game</a>
+        <a href="../t-rex/index.html">t-rex game</a>
+      </div>
+
+
+
+    <script>
+        const mainTitle = document.getElementById('main-title');
+        const subtitle = document.getElementById('subtitle');
+        
+        // Valores para controlar el cambio de tamaño
+        const initialFontSize = 24; // Tamaño inicial (más grande)
+        const finalFontSize = 4; // Tamaño final (más pequeño)
+        const scrollThreshold = 600; // altura en px donde queremos que termine la animación
+        
+        // Función para ajustar el tamaño del título
+        function adjustTitleSize() {
+            const scrollPosition = window.scrollY;
+            
+            // Calcular el nuevo tamaño de fuente basado en el scroll
+            let newSize;
+            if (scrollPosition <= scrollThreshold) {
+                // Calcular tamaño proporcionalmente
+                newSize = initialFontSize - ((initialFontSize - finalFontSize) * (scrollPosition / scrollThreshold));
+            } else {
+                // Mantener el tamaño mínimo
+                newSize = finalFontSize;
+            }
+            
+            // Aplicar el nuevo tamaño
+            requestAnimationFrame(() => {
+                mainTitle.style.fontSize = `${newSize}vw`;
+                
+                // Calcular la opacidad del subtítulo basado en el scroll
+                let subtitleOpacity = 0;
+                if (scrollPosition > scrollThreshold / 2) {
+                    subtitleOpacity = (scrollPosition - (scrollThreshold / 2)) / (scrollThreshold / 2);
+                    if (subtitleOpacity > 1) subtitleOpacity = 1;
+                }
+                
+                subtitle.style.opacity = subtitleOpacity;
+                subtitle.style.fontSize = `${newSize / 4}vw`;
+            });
+        }
+        
+        // Usar un throttle para limitar la frecuencia de actualización
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    adjustTitleSize();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+        
+        // Ejecutar al cargar
+        window.addEventListener('load', adjustTitleSize);
+    </script>
+
+    <script src="script.js"></script>

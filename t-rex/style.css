@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+:root {
+  --speed: 1.4s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background-color: #f3f3f3;
+  background-image: url("spawn.png");
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+.game_chrome {
+  position: fixed;      /* was relative */
+  left: 16px;           /* bottom-left corner */
+  bottom: 16px;
+  width: 600px;
+  margin: 0;            /* was auto-centering */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 195px;
+  padding-bottom: 60px;
+  background-color: #fff;
+  box-shadow: 0 6px 18px rgba(255, 0, 0, 0.294);
+}
+
+#game_over {
+  position: absolute;
+  content: "";
+  height: 250px;
+  width: 250px;
+  background-color: red;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.line {
+  height: 6px;
+  width: 100%;
+  position: relative;   /* stacking context for children */
+  background-image: url(floor.png);
+  background-repeat: repeat;
+  background-size: contain;
+  animation: road_land 0.6s infinite linear;
+}
+
+
+.line::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  right: 0;
+  border: 1px solid #ff0000;
+}
+
+#dino {
+  position: absolute;
+  top: -54px;
+  left: 0;
+  z-index: 99;
+}
+
+#dino   { position: absolute; top: -54px; left: 0;  z-index: 3; }
+#cactus { position: absolute; top: -55px; right: 0; z-index: 2;
+          animation: move var(--speed) infinite linear; animation-delay: .7s; }
+
+/* remove the negative z-index that hid the cactus */
+.elements { position: relative; z-index: 1; }
+
+
+#cactus {
+  position: absolute;
+  top: -55px;
+  right: 0;
+  animation: move var(--speed) infinite linear;
+  animation-delay: 0.7s;
+}
+
+.line img {
+  height: 60px;
+}
+
+.elements {
+  position: relative;
+  z-index: -1;
+}
+
+.elements::before {
+  background-image: url(eye.png);
+  top: -170px;
+  right: -350px;
+  animation: move_cloud_1 var(--speed) infinite linear;
+  animation-delay: 0.2s;
+}
+
+.elements::before,
+.elements::after {
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.elements::after {
+  background-image: url(eye.png);
+  top: -140px;
+  right: -30px;
+  animation: move_cloud_2 var(--speed) infinite linear;
+}
+
+.jump {
+  animation: jump 0.6s infinite linear;
+}
+
+.timer_info {
+  font-size: 20px;
+  padding-top: 15px;
+  font-family: "Press Start 2P", cursive;
+  color: #ff0000;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.timer_info p {
+  padding-top: 10px;
+  text-align: left;
+  font-size: 10px;
+}
+
+@keyframes move {
+  0% {
+    right: -50px;
+  }
+
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes jump {
+  0% {
+    top: -57px;
+  }
+
+  25% {
+    top: -90px;
+  }
+
+  50% {
+    top: -140px;
+  }
+
+  75% {
+    top: -90px;
+  }
+
+  100% {
+    top: -55px;
+  }
+}
+
+@keyframes move_cloud_1 {
+  0% {
+    right: -350px;
+  }
+
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes move_cloud_2 {
+  0% {
+    right: -30px;
+  }
+
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes road_land {
+  0% {
+    background-position-x: 150px;
+  }
+
+  100% {
+    background-position-x: 0;
+  }
+}
+
+.preload *,
+.preload *::before,
+.preload *::after {
+  animation-duration: 0s !important;
+  -webkit-animation-duration: 0s !important;
+}

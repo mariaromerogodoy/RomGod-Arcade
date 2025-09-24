@@ -1,0 +1,110 @@
+/* Fill the whole viewport, remove default margins */
+html, body {
+    height: 100%;
+  }
+  body {
+    margin: 0;                 /* important */
+    background: #000;
+    height: 1500px; /* Para permitir scroll */
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* The WALL should fill the screen and wrap children */
+  .arcadewall {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;  /* pack from top */
+    justify-content: center;    /* center rows; use 'flex-start' if you prefer left-align */
+    box-sizing: border-box;
+    overflow: hidden;           /* hide overflow if we slightly overfill */
+    padding: 7px;               /* optional gutter; match your bit size */
+  }
+  
+  /* Each character */
+  .arcade {
+    position: relative;
+    display: block;
+    /* float: left;  <-- not needed when using flex */
+  }
+  
+  /* Individual bits (unchanged) */
+  .bit {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    background: rgba(46, 204, 113, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0);
+    transition: all 380ms ease-in-out;
+  }
+  
+  .bit--active { background: #fff;
+    border-radius: 40% 60% 55% 45% / 50% 35% 65% 50%}
+  
+
+    .title-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .main-title {
+        font-size: 20vw; /* Tamaño inicial grande */
+        font-weight: bold;
+        margin: 0;
+        white-space: nowrap;
+        line-height: 1;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #fff;
+    }
+
+    .subtitle {
+        margin-top: 10px;
+        font-size: 5vw;
+        opacity: 0;
+        color: #fff;
+    }
+
+    
+
+    .Images {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); /* 5 columns */
+      gap: 30px;
+      margin: 40px;
+     margin-top: 40%;
+     bottom: 0;
+     text-align: center;
+    }
+    
+    /* Each link is a card */
+    .Images a {
+      bottom: 0;
+      display: block;                 /* make it a box */
+      padding: 16px 12px;
+      min-height: 80px;               /* optional */
+      background: #fff;
+      text-decoration: none;
+      color: #111;
+      text-align: center;
+      /* nicer edges/feedback */
+      border-radius: 40% 60% 55% 45% / 50% 35% 65% 50%;
+      box-shadow: 0 0 5px rgba(0,0,0,.35);
+      opacity: .85;
+      transition: transform .2s, opacity .2s, box-shadow .2s;
+    }
+    
+    /* hover (no space!) */
+    .Images a:hover {
+      opacity: 1;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(0,0,0,.18);
+    }

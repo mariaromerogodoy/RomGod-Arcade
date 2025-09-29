@@ -1,36 +1,36 @@
-/* Fill the whole viewport, remove default margins */
+
 html, body {
     height: 100%;
   }
   body {
-    margin: 0;                 /* important */
+    margin: 0;                 
     background: #000;
-    height: 1500px; /* Para permitir scroll */
+    height: 1500px; 
     overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
   }
   
-  /* The WALL should fill the screen and wrap children */
+  
   .arcadewall {
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
-    align-content: flex-start;  /* pack from top */
-    justify-content: center;    /* center rows; use 'flex-start' if you prefer left-align */
+    align-content: flex-start;  
+    justify-content: center;    
     box-sizing: border-box;
-    overflow: hidden;           /* hide overflow if we slightly overfill */
-    padding: 7px;               /* optional gutter; match your bit size */
+    overflow: hidden;            
+    padding: 7px;               
   }
   
-  /* Each character */
+  
   .arcade {
     position: relative;
     display: block;
-    /* float: left;  <-- not needed when using flex */
+    
   }
   
-  /* Individual bits (unchanged) */
+  
   .bit {
     position: absolute;
     width: 20px;
@@ -57,7 +57,7 @@ html, body {
     }
 
     .main-title {
-        font-size: 20vw; /* Tamaño inicial grande */
+        font-size: 20vw; 
         font-weight: bold;
         margin: 0;
         white-space: nowrap;
@@ -76,35 +76,162 @@ html, body {
     
 
     .Images {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr); /* 5 columns */
+      display: grid;                         
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 30px;
       margin: 40px;
-     margin-top: 40%;
-     bottom: 0;
-     text-align: center;
+      margin-top: 40%;
+      box-sizing: border-box;
+      place-items: center;                   
     }
-    
-    /* Each link is a card */
-    .Images a {
-      bottom: 0;
-      display: block;                 /* make it a box */
-      padding: 16px 12px;
-      min-height: 80px;               /* optional */
-      background: #00000000;
+
+
+    .ui-btn {
       text-decoration: none;
-      color: #ffffff;
-      text-align: center;
-      /* nicer edges/feedback */
-      border-color: 2px white;
-      box-shadow: 0 0 5px rgba(0,0,0,.35);
-      opacity: .85;
-      transition: transform .2s, opacity .2s, box-shadow .2s;
+      color: var(--default-btn-color, #ffffff);
+      padding: var(--btn-padding, 14px 18px);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      transition: var(--btn-transition, 250ms ease);
+      font-family:  Helvetica, Arial, sans-serif);
+      letter-spacing: var(--btn-letter-spacing, .04em);
+      z-index: 1000;
+      box-sizing: border-box;
+     padding: var(--btn-padding);
+     display: flex;
+    align-items: center;
+     justify-content: center;
+    color: var(--default-btn-color);
+    font: var(--font-weight) var(--font-size) var(--font-family);
+    background: var(--btn-default-bg);
+    border: none;
+    transition: var(--btn-transition);
+    overflow: hidden;
+    box-shadow: var(--btn-shadow);
     }
     
-    /* hover (no space!) */
-    .Images a:hover {
-      opacity: 1;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 16px rgba(0,0,0,.18);
+    /* SPAN INSIDE THE BUTTON */
+    .ui-btn span {
+      letter-spacing: var(--btn-letter-spacing);
+      transition: var(--btn-transition);
+      box-sizing: border-box;
+      position: relative;
+      background: inherit;
+    }
+    
+    /* OVERLAY LAYER THAT ANIMATES GLYPHS */
+    .ui-btn span::before {
+      box-sizing: border-box;
+      position: absolute;
+      content: "";
+      background: inherit;
+    }
+    
+    /* HOVER/FOCUS STATES */
+    .ui-btn:hover,
+    .ui-btn:focus {
+      background: var(--btn-hover-bg);
+    }
+    
+    .ui-btn:hover span,
+  .ui-btn:focus span {
+    color: var(--hover-btn-color);
+  }
+    
+  .ui-btn:hover span::before,
+  .ui-btn:focus span::before {
+    animation: chitchat linear both var(--btn-animation-duration);
+  }
+    
+    @keyframes chitchat {
+      0% {
+        content: "#";
+      }
+    
+      5% {
+        content: ".";
+      }
+    
+      10% {
+        content: "^{";
+      }
+    
+      15% {
+        content: "-!";
+      }
+    
+      20% {
+        content: "#$_";
+      }
+    
+      25% {
+        content: "№:0";
+      }
+    
+      30% {
+        content: "#{+.";}35%{content: "@}-?";
+      }
+    
+      40% {
+        content: "?{4@%";
+      }
+    
+      45% {
+        content: "=.,^!";
+      }
+    
+      50% {
+        content: "?2@%";
+      }
+    
+      55% {
+        content: "\;1}]";
+      }
+    
+      60% {
+        content: "?{%:%";
+        right: 0;
+      }
+    
+      65% {
+        content: "|{f[4";
+        right: 0;
+      }
+    
+      70% {
+        content: "{4%0%";
+        right: 0;
+      }
+    
+      75% {
+        content: "'1_0<";
+        right: 0;
+      }
+    
+      80% {
+        content: "{0%";
+        right: 0;
+      }
+    
+      85% {
+        content: "]>'";
+        right: 0;
+      }
+    
+      90% {
+        content: "4";
+        right: 0;
+      }
+    
+      95% {
+        content: "2";
+        right: 0;
+      }
+    
+      100% {
+        content: "";
+        right: 0;
+      }
     }

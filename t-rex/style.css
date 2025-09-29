@@ -28,7 +28,7 @@ body {
   overflow: hidden;
   padding-top: 195px;
   padding-bottom: 60px;
-  background-color: #fff;
+  background-color: #000000;
   box-shadow: 0 6px 18px rgba(255, 0, 0, 0.294);
 }
 
@@ -97,7 +97,9 @@ body {
 }
 
 .elements::before {
-  background-image: url(eye.png);
+  background-image: url(cloud.png);
+  background-size: cover;
+  
   top: -170px;
   right: -350px;
   animation: move_cloud_1 var(--speed) infinite linear;
@@ -115,7 +117,8 @@ body {
 }
 
 .elements::after {
-  background-image: url(eye.png);
+  background-image: url(cloud.png); 
+  background-size: cover;
   top: -140px;
   right: -30px;
   animation: move_cloud_2 var(--speed) infinite linear;

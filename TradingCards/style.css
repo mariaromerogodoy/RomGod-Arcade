@@ -1,0 +1,252 @@
+html, body {
+    cursor: url('../images/curser.svg') 12 0, auto; 
+    overscroll-behavior: none;
+}
+
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  :root{
+    --bg:#fff;
+    --ink:#111;
+    --bar:#e5e5e5;
+    --block:#dedede;
+    --gap:28px;
+    --maxw:1180px;
+    --rail-w:320px;
+  }
+  
+  /* Page grid */
+  body{
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    gap: 1rem;
+    padding-block: 2rem;
+    margin: 5px;
+    margin: 0;
+  padding: 0;
+  
+  width: 100%;
+  height: 100vh;
+  
+  background: #ff00bf;
+  background-image: linear-gradient(rgba(255,251,0) .1em, transparent .1em), linear-gradient(90deg, rgba(255,251,0) .1em, transparent .1em);
+  background-size: 3em 3em;
+  }
+  
+  /* Top bar */
+  header{
+    background-color: yellow;
+    color: #ff00bf;;
+    text-align: center;
+    min-height:34px;
+    box-shadow: 0 0 40px 10px #ff00bf;
+    font-weight: 600;
+    width: 100%;
+    position: fixed;
+    z-index: 7;
+  }
+  
+  .YG img {
+    justify-content: center; /* horizontal center */
+    align-items: center;
+    height: 34px;
+  }
+  
+  .YG {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .YG.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  
+  /* Main area: left content + right rail */
+  main{
+    width: 100%;
+    padding: var(--gap);
+  }
+   /*display:grid;
+    grid-template-columns: 1fr minmax(260px, var(--rail-w));
+    gap: clamp(18px, 3vw, var(--gap));
+    align-items:start;
+  }
+  
+  /* Left column with two big sections 
+  .content{
+    display:grid;
+    gap: var(--gap);
+  }*/
+  
+  
+  .hero {
+    padding: 10px;
+    min-height: 70svh; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+   /* border: 2px solid yellow;
+    background-color:#ff00bf;
+    box-shadow: 0 0 20px 5px Magenta; */
+  }
+  
+  .hero img {
+        height: 750px;
+        width:auto;
+  }
+  
+  
+  .feature {   
+      position: relative;      
+      min-height: 100vh;   
+      width: 100%;  
+         
+      overflow: hidden;        
+      opacity: 0;              
+      pointer-events: none;    
+      transition: opacity .2s ease-in;
+      cursor: url('../images/curser.svg') 12 0, auto;
+    }
+  
+   .feature.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  
+    .fotopopup.randompos img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    display: block;
+    cursor: url('../images/curser.svg') 12 0, auto;
+  }
+  
+  /* Pop-Ups */
+  .fotopopup {
+    border: 2px solid #fffb00;
+    /*box-shadow: 0 0 20px 10px #ff00bf;*/
+    background: none;
+    position: absolute;     /* required for top/left & dragging */
+    cursor: grab;
+    user-select: none;
+    top: 20px;
+    left: 40px;
+    z-index: 1;
+    /* Set a predictable box; the image will fit inside */
+    width: 225px;   /* adjust to your desired card size */
+    height: 312px;  /* adjust height as needed */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .fotopopup:active {
+  
+  }
+  
+  /* the image area will fill the rest */
+  .fotopopup img {
+    flex: 1 1 auto;
+  }
+  
+  .fotopopup :hover{
+    width: 270px;   /* adjust to your desired card size */
+    height: 355px;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  /* Responsive: stack on small screens */
+  @media (max-width: 900px){
+    main{
+      grid-template-columns: 1fr;
+    }
+    aside.rail{
+      position:static;  /* no sticky on narrow screens */
+      order: -1;        /* show rail above content (optional) */
+    }
+  }
+  
+  .footer {
+    top:25%;
+    right:0%;
+    position:fixed;
+    cursor: url('../images/curser.svg') 12 0, auto;
+  }
+  .footer a {
+    flex-direction: column (1,1);   /* stack children vertically */
+    align-items: center;  /* left-align them (use center if you prefer) */
+    gap: 8px;                /* space between buttons */
+    margin: 20px;
+    z-index: 10;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 12px 16px;
+    background: #ff00bf;
+    color: #fffb00;
+    border: 2px solid #fffb00;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    transition: transform .14s ease-out, box-shadow .14s ease-out, background .14s;
+    cursor: url('../images/curser.svg') 12 0, auto;
+  }
+  
+  .footer a:hover {
+    box-shadow: 4px 4px 0 #fffb00;
+    transform: translate(-4px, -4px);
+  }
+  
+  /* Optional: when “X” is active, tweak look a bit */
+  .toggle-btn.active {
+    background: White;        /* pop the X state */
+    color: #ff00bf;
+    border: 2px solid #ff00bf;
+    cursor: url('../images/curser.svg') 12 0, auto;
+  }
+  
+  /* Layout wrapper for each button */
+  .card {
+    position: relative;       /* keeps each button in its own layer */
+    width: fit-content;
+    
+  }
+  
+  /* Centered modal boxes */
+  .hidden {
+    background-color: white;
+    border: 2px solid #ff00bf;
+    color: #ff00bf;
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+    box-shadow: inset 0 0 15px 5px #ff00bf;
+    z-index: 9;
+    cursor: url('../images/curser.svg') 12 0, auto;
+  }
+  
+  /* (Optional) fade-in for modals */
+  .hidden.show {
+    display: block;
+    animation: fade .15s ease-out;
+  }
+  
+  @keyframes fade {
+    from { opacity: 0; transform: translate(-50%, -48%); }
+    to   { opacity: 1; transform: translate(-50%, -50%); }
+  }
+  

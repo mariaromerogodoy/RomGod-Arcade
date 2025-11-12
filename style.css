@@ -1,237 +1,189 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: #000;
+  height: 1500px;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-html, body {
-    height: 100%;
+.arcadewall {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 7px;
+}
+
+.arcade {
+  position: relative;
+  display: block;
+}
+
+.bit {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  background: rgba(46, 204, 113, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0);
+  transition: all 380ms ease-in-out;
+}
+
+.bit--active {
+  background: #b3ff00;
+  border-radius: 40% 60% 55% 45% / 50% 35% 65% 50%;
+}
+
+.title-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.main-title {
+  font-size: 20vw;
+  font-weight: bold;
+  margin: 0;
+  white-space: nowrap;
+  line-height: 1;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #b3ff00;
+}
+
+.subtitle {
+  margin-top: 10px;
+  font-size: 5vw;
+  opacity: 0;
+  color: #b3ff00;
+}
+
+/* .buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  margin: 40px;
+  margin-top: 40%;
+  box-sizing: border-box;
+  place-items: center;
+} */
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #050801;
+}
+
+a {
+  position: relative;
+  display: inline-block;
+  padding: 20px 25px;
+  margin: 40px 0;
+  color: #b3ff00;
+  text-decoration: none;
+  transition: 0.5s;
+  overflow: hidden;
+  margin-right: 50px;
+}
+a:hover {
+  background: #b3ff00;
+  color: #050801;
+  box-shadow: 0 0 5px #b3ff00, 0 0 25px #b3ff00, 0 0 50px #b3ff00,
+    0 0 200px #b3ff00;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+/* a:nth-child(1) {
+  filter: hue-rotate(270deg);
+}
+a:nth-child(2) {
+  filter: hue-rotate(110deg);
+} */
+a span {
+  position: absolute;
+  display: block;
+}
+a span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #b3ff00);
+  animation: animate1 1s linear infinite;
+}
+@keyframes animate1 {
+  0% {
+    left: -100%;
   }
-  body {
-    margin: 0;                 
-    background: #000;
-    height: 1500px; 
-    overflow-x: hidden;
-    font-family: Arial, Helvetica, sans-serif;
+  50%,
+  100% {
+    left: 100%;
   }
-  
-  
-  .arcadewall {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;  
-    justify-content: center;    
-    box-sizing: border-box;
-    overflow: hidden;            
-    padding: 7px;               
+}
+a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #b3ff00);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+@keyframes animate2 {
+  0% {
+    top: -100%;
   }
-  
-  
-  .arcade {
-    position: relative;
-    display: block;
-    
+  50%,
+  100% {
+    top: 100%;
   }
-  
-  
-  .bit {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 0;
-    left: 0;
-    box-sizing: border-box;
-    background: rgba(46, 204, 113, 0.1);
-    border: 1px solid rgba(0, 0, 0, 0);
-    transition: all 380ms ease-in-out;
+}
+a span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #b3ff00);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+@keyframes animate3 {
+  0% {
+    right: -100%;
   }
-  
-  .bit--active { background: #fff;
-    border-radius: 40% 60% 55% 45% / 50% 35% 65% 50%}
-  
-
-    .title-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        padding-top: 20px;
-    }
-
-    .main-title {
-        font-size: 20vw; 
-        font-weight: bold;
-        margin: 0;
-        white-space: nowrap;
-        line-height: 1;
-        font-family: Arial, Helvetica, sans-serif;
-        color: #fff;
-    }
-
-    .subtitle {
-        margin-top: 10px;
-        font-size: 5vw;
-        opacity: 0;
-        color: #fff;
-    }
-
-    
-
-    .Images {
-      display: grid;                         
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 30px;
-      margin: 40px;
-      margin-top: 40%;
-      box-sizing: border-box;
-      place-items: center;                   
-    }
-
-
-    .ui-btn {
-      text-decoration: none;
-      color: var(--default-btn-color, #ffffff);
-      padding: var(--btn-padding, 14px 18px);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border: none;
-      transition: var(--btn-transition, 250ms ease);
-      font-family:  Helvetica, Arial, sans-serif);
-      letter-spacing: var(--btn-letter-spacing, .04em);
-      z-index: 1000;
-      box-sizing: border-box;
-     padding: var(--btn-padding);
-     display: flex;
-    align-items: center;
-     justify-content: center;
-    color: var(--default-btn-color);
-    font: var(--font-weight) var(--font-size) var(--font-family);
-    background: var(--btn-default-bg);
-    border: none;
-    transition: var(--btn-transition);
-    overflow: hidden;
-    box-shadow: var(--btn-shadow);
-    }
-    
-    /* SPAN INSIDE THE BUTTON */
-    .ui-btn span {
-      letter-spacing: var(--btn-letter-spacing);
-      transition: var(--btn-transition);
-      box-sizing: border-box;
-      position: relative;
-      background: inherit;
-    }
-    
-    /* OVERLAY LAYER THAT ANIMATES GLYPHS */
-    .ui-btn span::before {
-      box-sizing: border-box;
-      position: absolute;
-      content: "";
-      background: inherit;
-    }
-    
-    /* HOVER/FOCUS STATES */
-    .ui-btn:hover,
-    .ui-btn:focus {
-      background: var(--btn-hover-bg);
-    }
-    
-    .ui-btn:hover span,
-  .ui-btn:focus span {
-    color: var(--hover-btn-color);
+  50%,
+  100% {
+    right: 100%;
   }
-    
-  .ui-btn:hover span::before,
-  .ui-btn:focus span::before {
-    animation: chitchat linear both var(--btn-animation-duration);
+}
+
+a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #b3ff00);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
   }
-    
-    @keyframes chitchat {
-      0% {
-        content: "#";
-      }
-    
-      5% {
-        content: ".";
-      }
-    
-      10% {
-        content: "^{";
-      }
-    
-      15% {
-        content: "-!";
-      }
-    
-      20% {
-        content: "#$_";
-      }
-    
-      25% {
-        content: "№:0";
-      }
-    
-      30% {
-        content: "#{+.";}35%{content: "@}-?";
-      }
-    
-      40% {
-        content: "?{4@%";
-      }
-    
-      45% {
-        content: "=.,^!";
-      }
-    
-      50% {
-        content: "?2@%";
-      }
-    
-      55% {
-        content: "\;1}]";
-      }
-    
-      60% {
-        content: "?{%:%";
-        right: 0;
-      }
-    
-      65% {
-        content: "|{f[4";
-        right: 0;
-      }
-    
-      70% {
-        content: "{4%0%";
-        right: 0;
-      }
-    
-      75% {
-        content: "'1_0<";
-        right: 0;
-      }
-    
-      80% {
-        content: "{0%";
-        right: 0;
-      }
-    
-      85% {
-        content: "]>'";
-        right: 0;
-      }
-    
-      90% {
-        content: "4";
-        right: 0;
-      }
-    
-      95% {
-        content: "2";
-        right: 0;
-      }
-    
-      100% {
-        content: "";
-        right: 0;
-      }
-    }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}

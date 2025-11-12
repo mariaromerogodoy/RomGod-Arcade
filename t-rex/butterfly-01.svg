@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 360 325.6">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #603813;
+      }
+
+      .cls-2 {
+        fill: #f393bd;
+      }
+
+      .cls-3 {
+        filter: url(#AI_PixelPlay_2-8);
+      }
+
+      .cls-4 {
+        filter: url(#AI_PixelPlay_2-9);
+      }
+
+      .cls-5 {
+        filter: url(#AI_PixelPlay_2-6);
+      }
+
+      .cls-6 {
+        filter: url(#AI_PixelPlay_2-7);
+      }
+
+      .cls-7 {
+        filter: url(#AI_PixelPlay_2-4);
+      }
+
+      .cls-8 {
+        filter: url(#AI_PixelPlay_2-5);
+      }
+
+      .cls-9 {
+        filter: url(#AI_PixelPlay_2-2);
+      }
+
+      .cls-10 {
+        filter: url(#AI_PixelPlay_2-3);
+      }
+
+      .cls-11 {
+        filter: url(#AI_PixelPlay_2);
+      }
+
+      .cls-12 {
+        fill: #ec3092;
+      }
+
+      .cls-13 {
+        fill: none;
+        stroke: #fff100;
+        stroke-miterlimit: 10;
+        stroke-width: 5px;
+      }
+
+      .cls-14 {
+        filter: url(#AI_PixelPlay_2-11);
+      }
+
+      .cls-15 {
+        filter: url(#AI_PixelPlay_2-10);
+      }
+
+      .cls-16 {
+        filter: url(#AI_PixelPlay_2-13);
+      }
+
+      .cls-17 {
+        filter: url(#AI_PixelPlay_2-12);
+      }
+    </style>
+    <filter id="AI_PixelPlay_2">
+      <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="7"/>
+      <feDiffuseLighting diffuseConstant="1" in="blur" result="diffuse" surfaceScale="5">
+        <feDistantLight azimuth="180" elevation="60"/>
+      </feDiffuseLighting>
+      <feSpecularLighting in="blur" result="specularOut" specularConstant="10" specularExponent="15" surfaceScale="15">
+        <feDistantLight azimuth="180" elevation="60"/>
+      </feSpecularLighting>
+      <feComposite in="specularOut" in2="SourceAlpha" operator="in" result="specularOut"/>
+      <feComposite in="SourceGraphic" in2="diffuse" k1="1" k2="0" k3="0" k4="0" operator="arithmetic" result="litPaint"/>
+      <feComposite in="litPaint" in2="specularOut" k1="0" k2="1" k3="1" k4="0" operator="arithmetic" result="litPaint1"/>
+      <feMerge>
+        <feMergeNode in="litPaint1"/>
+      </feMerge>
+    </filter>
+    <filter id="AI_PixelPlay_2-2" data-name="AI_PixelPlay_2">
+      <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="7"/>
+      <feDiffuseLighting diffuseConstant="1" in="blur" result="diffuse" surfaceScale="5">
+        <feDistantLight azimuth="180" elevation="60"/>
+      </feDiffuseLighting>
+      <feSpecularLighting in="blur" result="specularOut" specularConstant="10" specularExponent="15" surfaceScale="15">
+        <feDistantLight azimuth="180" elevation="60"/>
+      </feSpecularLighting>
+      <feComposite in="specularOut" in2="SourceAlpha" operator="in" result="specularOut"/>
+      <feComposite in="SourceGraphic" in2="diffuse" k1="1" k2="0" k3="0" k4="0" operator="arithmetic" result="litPaint"/>
+      <feComposite in="litPaint" in2="specularOut" k1="0" k2="1" k3="1" k4="0" operator="arithmetic" result="litPaint1"/>
+      <feMerge>
+        <feMergeNode in="litPaint1"/>
+      </feMerge>
+    </filter>
+    <filter id="AI_PixelPlay_2-3" data-name="AI_PixelPlay_2">
+      <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="7"/>
+      <feDiffuseLighting diffuseConstant="1" in="blur" result="diffuse" surfaceScale="5">
+        <feDistantLight azimuth="180" elevation="60"/>
+      </feDiffuseLighting>
+      <feSpecularLighting in="blur" result="specularOut" specularConstant="10" specularExponent="15" surfaceScale="15">
+        <feDistantLight azimuth="180" elevation="60"/>
+      </feSpecularLighting>
+      <feComposite in="specularOut" in2="SourceAlpha" operator="in" result="specularOut"/>
+      <feComposite in="SourceGraphic" in2="diffuse" k1="1" k2="0" k3="0" k4="0" operator="arithmetic" result="litPaint"/>
+      <feComposite in="litPaint" in2="specularOut" k1="0" k2="1" k3="1" k4="0" operator="arithmetic" result="litPaint1"/>
+      <feMerge>
+        <feMergeNode in="litPaint1"/>
+      </feMerge>
+    </filter>
+    <filter id="AI_PixelPlay_2-4" data-name="AI_PixelPlay_2">
+      <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="7"/>
+      <feDiffuseLighting diffuseConstant="1" in="blur" result="diffuse" surfaceScale="5">
+        <feDistantLight azimuth="180" elevation="60"/>
+      </feDiffuseLighting>
+      <feSpecularLighting in="blur" result="specularOut" specularConstant="10" specularExponent="15" surfaceScale="15">
+        <feDistantLight azimuth="180" elevation="60"/>
+      </feSpecularLighting>
+      <feComposite in="specularOut" in2="SourceAlpha" operator="in" result="specularOut"/>
+      <feComposite in="SourceGraphic" in2="diffuse" k1="1" k2="0" k3="0" k4="0" operator="arithmetic" result="litPaint"/>
+      <feComposite in="litPaint" in2="specularOut" k1="0" k2="1" k3="1" k4="0" operator="arithmetic" result="litPaint1"/>
+      <feMerge>
+        <feMergeNode in="litPaint1"/>
+      </feMerge>
+    </filter>
+    <filter id="AI_PixelPlay_2-5" data-name="AI_PixelPlay_2">
+      <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="7"/>
+      <feDiffuseLighting diffuseConstant="1" in="blur" result="diffuse" surfaceScale="5">
+        <feDistantLight azimuth="180" elevation="60"/>
+      </feDiffuseLighting>
+      <feSpecularLighting in="blur" result="specularOut" specularConstant="10" specularExponent="15" surfaceScale="15">
+        <feDistantLight azimuth="180" elevation="60"/>
+      </feSpecularLighting>
+      <feComposite in="specularOut" in2="SourceAlpha" operator="in" result="specularOut"/>
+      <feComposite in="SourceGraphic" in2="diffuse" k1="1" k2="0" k3="0" k4="0" operator="arithmetic" result="litPaint"/>
+      <feComposite in="litPaint" in2="specularOut" k1="0" k2="1" k3="1" k4="0" operator="arithmetic" result="litPaint1"/>
+      <feMerge>
+        <feMergeNode in="litPaint1"/>
+      </feMerge>
+    </filter>
+    <filter id="AI_PixelPlay_2-6" data-name="AI_PixelPlay_2">
+      <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="7"/>
+      <feDiffuseLighting diffuseConstant="1" in="blur" result="diffuse" surfaceScale="5">
+        <feDistantLight azimuth="180" elevation="60"/>
+      </feDiffuseLighting>
+      <feSpecularLighting in="blur" result="specularOut" specularConstant="10" specularExponent="15" surfaceScale="15">
+        <feDistantLight azimuth="180" elevation="60"/>
+      </feSpecularLighting>
+      <feComposite in="specularOut" in2="SourceAlpha" operator="in" result="specularOut"/>
+      <feComposite in="SourceGraphic" in2="diffuse" k1="1" k2="0" k3="0" k4="0" operator="arithmetic" result="litPaint"/>
+      <feComposite in="litPaint" in2="specularOut" k1="0" k2="1" k3="1" k4="0" operator="arithmetic" result="litPaint1"/>
+      <feMerge>
+        <feMergeNode in="litPaint1"/>
+      </feMerge>
+    </filter>
+    <filter id="AI_PixelPlay_2-7" data-name="AI_PixelPlay_2">
+      <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="7"/>
+      <feDiffuseLighting diffuseConstant="1" in="blur" result="diffuse" surfaceScale="5">
+        <feDistantLight azimuth="180" elevation="60"/>
+      </feDiffuseLighting>
+      <feSpecularLighting in="blur" result="specularOut" specularConstant="10" specularExponent="15" surfaceScale="15">
+        <feDistantLight azimuth="180" elevation="60"/>
+      </feSpecularLighting>
+      <feComposite in="specularOut" in2="SourceAlpha" operator="in" result="specularOut"/>
+      <feComposite in="SourceGraphic" in2="diffuse" k1="1" k2="0" k3="0" k4="0" operator="arithmetic" result="litPaint"/>
+      <feComposite in="litPaint" in2="specularOut" k1="0" k2="1" k3="1" k4="0" operator="arithmetic" result="litPaint1"/>
+      <feMerge>
+        <feMergeNode in="litPaint1"/>
+      </feMerge>
+    </filter>
+    <filter id="AI_PixelPlay_2-8" data-name="AI_PixelPlay_2">
+      <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="7"/>
+      <feDiffuseLighting diffuseConstant="1" in="blur" result="diffuse" surfaceScale="5">
+        <feDistantLight azimuth="180" elevation="60"/>
+      </feDiffuseLighting>
+      <feSpecularLighting in="blur" result="specularOut" specularConstant="10" specularExponent="15" surfaceScale="15">
+        <feDistantLight azimuth="180" elevation="60"/>
+      </feSpecularLighting>
+      <feComposite in="specularOut" in2="SourceAlpha" operator="in" result="specularOut"/>
+      <feComposite in="SourceGraphic" in2="diffuse" k1="1" k2="0" k3="0" k4="0" operator="arithmetic" result="litPaint"/>
+      <feComposite in="litPaint" in2="specularOut" k1="0" k2="1" k3="1" k4="0" operator="arithmetic" result="litPaint1"/>
+      <feMerge>
+        <feMergeNode in="litPaint1"/>
+      </feMerge>
+    </filter>
+    <filter id="AI_PixelPlay_2-9" data-name="AI_PixelPlay_2">
+      <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="7"/>
+      <feDiffuseLighting diffuseConstant="1" in="blur" result="diffuse" surfaceScale="5">
+        <feDistantLight azimuth="180" elevation="60"/>
+      </feDiffuseLighting>
+      <feSpecularLighting in="blur" result="specularOut" specularConstant="10" specularExponent="15" surfaceScale="15">
+        <feDistantLight azimuth="180" elevation="60"/>
+      </feSpecularLighting>
+      <feComposite in="specularOut" in2="SourceAlpha" operator="in" result="specularOut"/>
+      <feComposite in="SourceGraphic" in2="diffuse" k1="1" k2="0" k3="0" k4="0" operator="arithmetic" result="litPaint"/>
+      <feComposite in="litPaint" in2="specularOut" k1="0" k2="1" k3="1" k4="0" operator="arithmetic" result="litPaint1"/>
+      <feMerge>
+        <feMergeNode in="litPaint1"/>
+      </feMerge>
+    </filter>
+    <filter id="AI_PixelPlay_2-10" data-name="AI_PixelPlay_2">
+      <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="7"/>
+      <feDiffuseLighting diffuseConstant="1" in="blur" result="diffuse" surfaceScale="5">
+        <feDistantLight azimuth="180" elevation="60"/>
+      </feDiffuseLighting>
+      <feSpecularLighting in="blur" result="specularOut" specularConstant="10" specularExponent="15" surfaceScale="15">
+        <feDistantLight azimuth="180" elevation="60"/>
+      </feSpecularLighting>
+      <feComposite in="specularOut" in2="SourceAlpha" operator="in" result="specularOut"/>
+      <feComposite in="SourceGraphic" in2="diffuse" k1="1" k2="0" k3="0" k4="0" operator="arithmetic" result="litPaint"/>
+      <feComposite in="litPaint" in2="specularOut" k1="0" k2="1" k3="1" k4="0" operator="arithmetic" result="litPaint1"/>
+      <feMerge>
+        <feMergeNode in="litPaint1"/>
+      </feMerge>
+    </filter>
+    <filter id="AI_PixelPlay_2-11" data-name="AI_PixelPlay_2">
+      <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="7"/>
+      <feDiffuseLighting diffuseConstant="1" in="blur" result="diffuse" surfaceScale="5">
+        <feDistantLight azimuth="180" elevation="60"/>
+      </feDiffuseLighting>
+      <feSpecularLighting in="blur" result="specularOut" specularConstant="10" specularExponent="15" surfaceScale="15">
+        <feDistantLight azimuth="180" elevation="60"/>
+      </feSpecularLighting>
+      <feComposite in="specularOut" in2="SourceAlpha" operator="in" result="specularOut"/>
+      <feComposite in="SourceGraphic" in2="diffuse" k1="1" k2="0" k3="0" k4="0" operator="arithmetic" result="litPaint"/>
+      <feComposite in="litPaint" in2="specularOut" k1="0" k2="1" k3="1" k4="0" operator="arithmetic" result="litPaint1"/>
+      <feMerge>
+        <feMergeNode in="litPaint1"/>
+      </feMerge>
+    </filter>
+    <filter id="AI_PixelPlay_2-12" data-name="AI_PixelPlay_2">
+      <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="7"/>
+      <feDiffuseLighting diffuseConstant="1" in="blur" result="diffuse" surfaceScale="5">
+        <feDistantLight azimuth="180" elevation="60"/>
+      </feDiffuseLighting>
+      <feSpecularLighting in="blur" result="specularOut" specularConstant="10" specularExponent="15" surfaceScale="15">
+        <feDistantLight azimuth="180" elevation="60"/>
+      </feSpecularLighting>
+      <feComposite in="specularOut" in2="SourceAlpha" operator="in" result="specularOut"/>
+      <feComposite in="SourceGraphic" in2="diffuse" k1="1" k2="0" k3="0" k4="0" operator="arithmetic" result="litPaint"/>
+      <feComposite in="litPaint" in2="specularOut" k1="0" k2="1" k3="1" k4="0" operator="arithmetic" result="litPaint1"/>
+      <feMerge>
+        <feMergeNode in="litPaint1"/>
+      </feMerge>
+    </filter>
+    <filter id="AI_PixelPlay_2-13" data-name="AI_PixelPlay_2">
+      <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="7"/>
+      <feDiffuseLighting diffuseConstant="1" in="blur" result="diffuse" surfaceScale="5">
+        <feDistantLight azimuth="180" elevation="60"/>
+      </feDiffuseLighting>
+      <feSpecularLighting in="blur" result="specularOut" specularConstant="10" specularExponent="15" surfaceScale="15">
+        <feDistantLight azimuth="180" elevation="60"/>
+      </feSpecularLighting>
+      <feComposite in="specularOut" in2="SourceAlpha" operator="in" result="specularOut"/>
+      <feComposite in="SourceGraphic" in2="diffuse" k1="1" k2="0" k3="0" k4="0" operator="arithmetic" result="litPaint"/>
+      <feComposite in="litPaint" in2="specularOut" k1="0" k2="1" k3="1" k4="0" operator="arithmetic" result="litPaint1"/>
+      <feMerge>
+        <feMergeNode in="litPaint1"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g class="cls-11">
+    <path class="cls-12" d="M179.4,127.24S96.33-9.65,36.97,28.71c-28.98,18.73-28.32,71.36-5.34,105.95,24.23,36.46,71.66,54.43,71.66,54.43,0,0-57.23,16.35-42.31,67.06,14.92,50.71,56.9,36.61,56.9,36.61,0,0,36.42-5.47,62.29-94.58l-.77-70.94Z"/>
+    <path class="cls-13" d="M179.4,127.24S96.33-9.65,36.97,28.71c-28.98,18.73-28.32,71.36-5.34,105.95,24.23,36.46,71.66,54.43,71.66,54.43,0,0-57.23,16.35-42.31,67.06,14.92,50.71,56.9,36.61,56.9,36.61,0,0,36.42-5.47,62.29-94.58l-.77-70.94Z"/>
+  </g>
+  <g class="cls-9">
+    <path class="cls-2" d="M178.35,150.43c-14.94-18.19-32.58-34.11-52.17-47.18-9.54-6.36-20.94-14.4-33.05-12.16-10.76,1.99-18.97,13.24-13.78,23.77,2.72,5.52,8.21,9.8,13.16,13.23,5.39,3.73,11.47,6.48,17.76,8.27v-9.42c-7.73,1.17-16.51,3.57-20.05,11.34-3.66,8.02.18,17.03,6.26,22.71,13.71,12.82,36.2,11.21,53.38,9.15,11.57-1.39,22.96-3.77,34.08-7.25,5.98-1.87,3.43-11.31-2.6-9.42-16.25,5.09-33.28,8.1-50.34,8.14-7.19.02-14.75-.59-21.38-3.61-5.05-2.29-10.84-6.72-11.12-12.8-.32-6.92,9.35-8.09,14.36-8.85,5-.76,4.29-8.2,0-9.42-8.66-2.47-17.5-7.25-23.34-14.28-2.08-2.51-2.95-5.33-.92-8.08,2.26-3.07,6.07-4.31,9.73-4.08,4.89.31,9.46,2.84,13.59,5.28s8.4,5.23,12.47,8.04c8.24,5.7,16.08,11.95,23.49,18.7,8.45,7.69,16.31,16,23.56,24.82,1.68,2.04,5.17,1.74,6.91,0,2.02-2.02,1.68-4.86,0-6.91h0Z"/>
+  </g>
+  <g class="cls-10">
+    <path class="cls-2" d="M82.51,71.94c6.28,0,6.3-9.77,0-9.77s-6.3,9.77,0,9.77h0Z"/>
+  </g>
+  <g class="cls-7">
+    <path class="cls-2" d="M60.39,97.23c6.28,0,6.3-9.77,0-9.77s-6.3,9.77,0,9.77h0Z"/>
+  </g>
+  <g class="cls-8">
+    <path class="cls-2" d="M67.42,132.36c6.28,0,6.3-9.77,0-9.77s-6.3,9.77,0,9.77h0Z"/>
+  </g>
+  <g class="cls-5">
+    <path class="cls-2" d="M103.66,240.42c-2.67,2.76-8.87,4.59-12.32,3.45-3.77-1.25-5.15-6.11-1.71-8.42,5.43-3.65,13.12-1.02,19.23-1.28,7.38-.31,14.42-3.52,19.23-9.17l-7.67-5.92c-2.49,5.54-3.34,11.33-2.32,17.35.48,2.82,1.47,5.55,2.79,8.08,1.03,1.98,2.9,4.08,3.14,6.34.37,3.51-3.61,5.38-6.48,4.17-1.85-.78-2.85-2.46-3.92-4.07-.71-1.06-1.5-2.2-1.96-3.4-.12-.32-.16-1.6-.34-1.21,1.1-2.39.68-5.26-1.75-6.68-2.11-1.23-5.57-.65-6.68,1.75-1.75,3.8-1.42,7.33.34,11.07,1.35,2.88,3.44,6.18,5.75,8.38,5.52,5.25,14.25,5.87,20.05.76,2.74-2.42,4.39-5.88,4.71-9.5s-1.3-7.16-3.15-10.31c-3.2-5.45-4.43-11.81-1.74-17.79,1-2.22.83-4.74-1.26-6.3-1.81-1.36-4.81-1.5-6.41.38-4.12,4.84-9.41,6.57-15.65,6.28-6.97-.33-13.94-1.3-20.3,2.32-5.73,3.26-8.83,9.96-6.71,16.36,2.05,6.19,7.39,10.33,13.86,10.82s13.76-1.96,18.2-6.54-2.52-11.43-6.91-6.91h0Z"/>
+  </g>
+  <g class="cls-6">
+    <path class="cls-12" d="M184.99,133.96S268.07-2.93,327.43,35.43c28.98,18.73,28.32,71.36,5.34,105.95-24.23,36.46-71.66,54.43-71.66,54.43,0,0,57.23,16.35,42.31,67.06-14.92,50.71-56.9,36.61-56.9,36.61,0,0-36.42-5.47-62.29-94.58l.77-70.94Z"/>
+    <path class="cls-13" d="M184.99,133.96S268.07-2.93,327.43,35.43c28.98,18.73,28.32,71.36,5.34,105.95-24.23,36.46-71.66,54.43-71.66,54.43,0,0,57.23,16.35,42.31,67.06-14.92,50.71-56.9,36.61-56.9,36.61,0,0-36.42-5.47-62.29-94.58l.77-70.94Z"/>
+  </g>
+  <g class="cls-3">
+    <path class="cls-2" d="M186.05,157.15c14.94-18.19,32.58-34.11,52.17-47.18,9.54-6.36,20.94-14.4,33.05-12.16,10.76,1.99,18.97,13.24,13.78,23.77-2.72,5.52-8.21,9.8-13.16,13.23-5.39,3.73-11.47,6.48-17.76,8.27v-9.42c7.73,1.17,16.51,3.57,20.05,11.34,3.66,8.02-.18,17.03-6.26,22.71-13.71,12.82-36.2,11.21-53.38,9.15-11.57-1.39-22.96-3.77-34.08-7.25-5.98-1.87-3.43-11.31,2.6-9.42,16.25,5.09,33.28,8.1,50.34,8.14,7.19.02,14.75-.59,21.38-3.61,5.05-2.29,10.84-6.72,11.12-12.8.32-6.92-9.35-8.09-14.36-8.85s-4.29-8.2,0-9.42c8.66-2.47,17.5-7.25,23.34-14.28,2.08-2.51,2.95-5.33.92-8.08-2.26-3.07-6.07-4.31-9.73-4.08-4.89.31-9.46,2.84-13.59,5.28s-8.4,5.23-12.47,8.04c-8.24,5.7-16.08,11.95-23.49,18.7-8.45,7.69-16.31,16-23.56,24.82-1.68,2.04-5.17,1.74-6.91,0-2.02-2.02-1.68-4.86,0-6.91h0Z"/>
+  </g>
+  <g class="cls-4">
+    <path class="cls-2" d="M281.89,78.66c-6.28,0-6.3-9.77,0-9.77s6.3,9.77,0,9.77h0Z"/>
+  </g>
+  <g class="cls-15">
+    <path class="cls-2" d="M304,103.95c-6.28,0-6.3-9.77,0-9.77s6.3,9.77,0,9.77h0Z"/>
+  </g>
+  <g class="cls-14">
+    <path class="cls-2" d="M296.98,139.08c-6.28,0-6.3-9.77,0-9.77s6.3,9.77,0,9.77h0Z"/>
+  </g>
+  <g class="cls-17">
+    <path class="cls-2" d="M260.73,247.14c2.67,2.76,8.87,4.59,12.32,3.45,3.77-1.25,5.15-6.11,1.71-8.42-5.43-3.65-13.12-1.02-19.23-1.28-7.38-.31-14.42-3.52-19.23-9.17,2.56-1.97,5.11-3.95,7.67-5.92,2.49,5.54,3.34,11.33,2.32,17.35-.48,2.82-1.47,5.55-2.79,8.08-1.03,1.98-2.9,4.08-3.14,6.34-.37,3.51,3.61,5.38,6.48,4.17,1.85-.78,2.85-2.46,3.92-4.07.71-1.06,1.5-2.2,1.96-3.4.12-.32.16-1.6.34-1.21-1.1-2.39-.68-5.26,1.75-6.68,2.11-1.23,5.57-.65,6.68,1.75,1.75,3.8,1.42,7.33-.34,11.07-1.35,2.88-3.44,6.18-5.75,8.38-5.52,5.25-14.25,5.87-20.05.76-2.74-2.42-4.39-5.88-4.71-9.5s1.3-7.16,3.15-10.31c3.2-5.45,4.43-11.81,1.74-17.79-1-2.22-.83-4.74,1.26-6.3,1.81-1.36,4.81-1.5,6.41.38,4.12,4.84,9.41,6.57,15.65,6.28,6.97-.33,13.94-1.3,20.3,2.32,5.73,3.26,8.83,9.96,6.71,16.36-2.05,6.19-7.39,10.33-13.86,10.82-6.3.48-13.76-1.96-18.2-6.54s2.52-11.43,6.91-6.91h0Z"/>
+  </g>
+  <g class="cls-16">
+    <path class="cls-1" d="M181.45,251.81c-6.38-28.68-8.04-57.64-8.45-86.79-.04-29.16,1.18-58.13,7.17-86.91,6.42,28.68,8.07,57.63,8.45,86.79.01,29.16-1.21,58.13-7.17,86.91h0Z"/>
+  </g>
+</svg>

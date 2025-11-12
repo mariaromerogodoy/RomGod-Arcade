@@ -1,0 +1,16 @@
+Html,
+Body {
+  overscroll-behavior: none;
+  font-family: "paradroid-mono-soft", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+body {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #0033ff,
+    white,
+    white,
+    #ee00ff
+  );
+}

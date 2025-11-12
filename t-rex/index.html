@@ -1,32 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <!-- fix the comma in meta -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" , content="width=device-width, initial-scale=1.0" />
     <title>Chrome Dinosaur Game</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dino.css" />
+    <script src="dino.js"></script>
   </head>
-
-  <!-- single body with preload -->
-  <body class="preload">
-    <div class="game_chrome">
-      <div class="line">
-        <p class="dino_rex">
-          <img id="dino" src="1-01.svg" alt="dino_pic">
-        </p>
-        <p class="elements">
-          <img id="cactus" src="1-05.svg" alt="cactus_pic">
-        </p>
-        <div class="timer_info" id="timer">00:00:00
-          <p>Press SPACE or TAB to start</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="home"><a href="../index.html">Home</a></div>
-    
-          </body>
-        <script src="script.js"></script>
-    </body>
+  <body>
+    <h1>DON'T SLIP</h1>
+    <canvas id="board"></canvas>
+  </body>
 </html>

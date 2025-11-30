@@ -1,10 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" , content="width=device-width, initial-scale=1.0" />
-    <title>Music</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <title>Document</title>
   </head>
+  <body>
+    <input type="file" id="audioFileInput" accept="audio/*" />
+    <audio id="audioPlayer" controls></audio>
+    <input type="number" id="audioPitch" value="1" step=".05" />
+    <input
+      type="range"
+      id="speed"
+      name="volume"
+      min="0.5"
+      max="2"
+      value="1"
+      step=".1"
+    />
+  </body>
+  <script>
+    const speed = document.getElementById("speed");
+    speed.addEventListener("change", changeAudioSpeed);
+
+    const audioPitch = document.getElementById("audioPitch");
+    audioPitch.addEventListener("change", changeAudioSpeed);
+
+    const audioFileInput = document.getElementById("audioFileInput");
+    console.log(audioFileInput);
+    // to this thing, add event listener, listen for change, run function
+    audioFileInput.addEventListener("change", processAudioFileUpload);
+
+    function processAudioFileUpload(event) {
+      console.log(event);
+      const audioFile = event.target.files[0]; // Get the selected file
+
+      if (audioFile) {
+        const audioPlayer = document.getElementById("audioPlayer");
+        const fileURL = URL.createObjectURL(audioFile); // Create a URL for the file
+        console.log(fileURL);
+
+        audioPlayer.src = fileURL; // Set the audio player's source
+        audioPlayer.load(); // Load the new source
+        // audioPlayer.play(); // Optionally, play automatically
+      }
+    }
+
+    function changeAudioSpeed(event) {
+      console.log(event);
+      console.log(event.target.value);
+      audioPlayer.playbackRate = event.target.value;
+    }
+  </script>
 </html>

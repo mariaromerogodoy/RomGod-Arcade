@@ -131,3 +131,11 @@ input[type="range"]:focus::-moz-range-thumb {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   border: 0%;
 }
+
+.h1 img {
+  position: fixed;
+  width: 100%;
+  height: 100%; /* fill screen */
+  z-index: 9999; /* highest layer */
+  pointer-events: none;
+}

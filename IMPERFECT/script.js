@@ -1,9 +1,9 @@
 const soundEffects = {
-  airhorn: "sound/1.mp3",
-  scratch: "sound/2.mp3",
-  siren: "sound/3.mp3",
-  laser: "sound/4.mp3",
-  drum: "sound/5.mp3",
+  pREssMe: "sound/1.mp3",
+  PRESSME: "sound/2.mp3",
+  prESSSmE: "sound/3.mp3",
+  pressme: "sound/4.mp3",
+  PReSsMe: "sound/5.mp3",
 };
 
 // One shared audio context for FX

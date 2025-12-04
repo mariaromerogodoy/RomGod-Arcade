@@ -20,7 +20,7 @@ Body {
   margin-top: 1rem;
 }
 
-.fx-btn {
+/* .fx-btn {
   padding: 0.6rem 1.2rem;
   border: none;
   background: #000;
@@ -28,11 +28,7 @@ Body {
   font-size: 0.9rem;
   cursor: pointer;
   transition: 0.2s;
-}
-
-.fx-btn:hover {
-  background: #444;
-}
+} */
 
 /*********** Baseline, reset styles ***********/
 input[type="range"] {
@@ -94,8 +90,9 @@ input[type="range"]:focus::-moz-range-thumb {
   outline-offset: 0.125rem;
 }
 
-.fx-btn.active {
-  background: #000000; /* or any color you like */
+.fx-btn.active,
+.fx-btn1.active {
+  background: #000000;
 }
 
 .players {
@@ -131,4 +128,6 @@ input[type="range"]:focus::-moz-range-thumb {
 .fx-btn1 {
   transform: rotate(-8deg);
   transform-origin: center center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 0%;
 }

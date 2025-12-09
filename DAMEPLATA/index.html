@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flowers</title>
+
+    <style>
+      body {
+        font-family: "Courier New", Courier, monospace;
+        padding: 40px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #000000;
+        color: #ff00f7;
+      }
+
+      #nextBtn {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        transition: transform 0.15s ease;
+        margin-bottom: 8px;
+      }
+
+      #nextBtn img {
+        width: 260px;
+        height: auto;
+        display: block;
+      }
+
+      #nextBtn:active {
+        transform: rotateX(-45deg);
+      }
+
+      #label {
+        font-size: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      #viewerWrap {
+        position: relative;
+        width: 700px;
+        height: 500px;
+      }
+
+      #viewer {
+        width: 100%;
+        height: 100%;
+        background: #000000;
+        object-fit: contain;
+        display: block;
+      }
+
+      #pixelContainer {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        overflow: hidden;
+      }
+
+      .drop {
+        position: absolute;
+        width: 40px;
+        height: auto;
+        opacity: 1;
+        animation: fall 1.6s linear forwards;
+      }
+
+      @keyframes fall {
+        0% {
+          transform: translateY(-40px) rotate(0deg);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(380px) rotate(25deg);
+          opacity: 0.8;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button id="nextBtn" type="button">
+      <img src="water.png" alt="Water Button" />
+    </button>
+
+    <div id="label">DAME PLATA</div>
+
+    <div id="viewerWrap">
+      <img id="viewer" src="0.png" alt="Plant Image" />
+      <div id="pixelContainer"></div>
+    </div>
+
+    <script>
+      function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+        const expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
+
+      function getCookie(cname) {
+        const name = cname + "=";
+        const decodedCookie = decodeURIComponent(document.cookie);
+        const ca = decodedCookie.split(";");
+        for (let i = 0; i < ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) == " ") c = c.substring(1);
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+      }
+
+      function checkCookie(cname) {
+        const value = getCookie(cname);
+        return value !== "" && value !== undefined;
+      }
+
+      const images = [
+        "0.png",
+        "1.png",
+        "2.png",
+        "3.png",
+        "4.png",
+        "5.png",
+        "6.png",
+      ];
+
+      let index = 0;
+      if (checkCookie("plantIndex")) {
+        const saved = parseInt(getCookie("plantIndex"));
+        if (!isNaN(saved)) index = saved;
+      }
+
+      const viewer = document.getElementById("viewer");
+      const nextBtn = document.getElementById("nextBtn");
+      const pixelContainer = document.getElementById("pixelContainer");
+      const viewerWrap = document.getElementById("viewerWrap");
+
+      viewer.src = images[index];
+
+      function makeWaterRain() {
+        const count = 20;
+        const width = viewerWrap.clientWidth;
+
+        for (let i = 0; i < count; i++) {
+          const drop = document.createElement("img");
+          drop.src = "water.png";
+          drop.classList.add("drop");
+
+          drop.style.left = Math.random() * width + "px";
+
+          drop.style.animationDelay = Math.random() * 0.4 + "s";
+
+          pixelContainer.appendChild(drop);
+
+          setTimeout(() => drop.remove(), 2000);
+        }
+      }
+
+      nextBtn.addEventListener("click", () => {
+        index = (index + 1) % images.length;
+        viewer.src = images[index];
+
+        setCookie("plantIndex", index, 30);
+
+        makeWaterRain();
+      });
+    </script>
+  </body>
+</html>

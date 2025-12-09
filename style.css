@@ -101,9 +101,9 @@ a {
 a:hover {
   background: #b3ff00;
   color: #050801;
-  box-shadow: 0 0 5px #b3ff00, 0 0 25px #b3ff00, 0 0 50px #b3ff00,
+  /* box-shadow: 0 0 5px #b3ff00, 0 0 25px #b3ff00, 0 0 50px #b3ff00,
     0 0 200px #b3ff00;
-  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005); */
 }
 /* a:nth-child(1) {
   filter: hue-rotate(270deg);

@@ -1,0 +1,18 @@
+html,
+body {
+  cursor: url("ine.png") 12 0, auto;
+  overscroll-behavior: none;
+}
+
+.h1 img,
+.h2 img {
+  position: fixed;
+  width: 40%;
+  height: auto; /* fill screen */
+  pointer-events: none;
+  justify-content: center;
+  align-items: center;
+  left: 40%;
+  top: -5%;
+  cursor: url("ine.png") 12 0, auto;
+}
